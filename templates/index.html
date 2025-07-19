@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Merge Tool</title>   
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+ 
+ <div class="container">
+        <div class="header">
+            <h1 class="logo">PDF Fusion</h1>
+            <p class="tagline">Merge your PDFs with premium precision</p>
+        </div>
+        
+        <div class="form-container">
+            <form action="/merge" method="POST" enctype="multipart/form-data">
+                <div class="upload-section">
+                    <label for="pdfs" class="upload-label">Select PDF Files to Merge</label>
+                    <div class="file-input-wrapper" onclick="document.getElementById('pdfs').click()">
+                        <div class="file-input-area">
+                            <span class="upload-icon">🤖</span>
+                            <div class="upload-text">Choose your PDF files</div>
+                            <div class="upload-subtext">Click here to merge multiple files together.</div>
+                            <input type="file" name="pdfs" id="pdfs" accept=".pdf" multiple class="file-input" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="btn-container">
+                    <button type="submit" class="merge-btn">
+                        Merge PDFs
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Marvel-inspired characters -->
+    <div class="marvel-characters">
+        <div class="logoname">Design & Develope by Zishan Arif</div>
+    </div>
+    
+
+</body>
+</html>
